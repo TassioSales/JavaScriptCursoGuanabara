@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testa cidadania</title>
+</head>
+<body>
+    <h1>Sistema de verificação</h1>
+    Pais onde nasceu: <input type="text" name = "txtnasc" id="txtnasc">
+    <input type="button" value="Verificar" onclick="verificacar()">
+    <div id = "res">
+
+    </div>
+    <script>
+        function verificacar(){
+            var txtv = window.document.querySelector("input#txtnasc")
+            var res = window.document.querySelector("div#res")
+            var pais = txtv.value
+            res.innerHTML = `<p>Seu pais de nascimento ${pais}<p>`
+            if (pais == "Brasil" || pais == "brasil") {
+                res.innerHTML = `<p>Voce e BRASILEIRO<p>`
+                
+            }else{
+                res.innerHTML = `<p>Voce e Estrangeiro<p>`
+            }
+            res.innerHTML += `<p>Seja bem vindo<p>`
+
+        }
+    </script>
+</body>
+</html>
